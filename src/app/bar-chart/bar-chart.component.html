@@ -1,0 +1,36 @@
+<h4 class="text-center text-primary"> First Bar-Chart Example</h4><br/>
+<div>
+  <div>
+    <div style="display: block">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+    <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+  </div>
+</div>
+
+<br><br>
+
+
+<h4 class="text-center text-primary"> Second Bar-Chart Example</h4><br/>
+<div>
+  <div style="display: block">
+    <canvas baseChart
+      [datasets]="barChartDataTwo"
+      [labels]="mbarChartLabelsTwo"
+      [options]="barChartOptionsTwo"
+      [colors]="barChartColorsTwo"
+      [legend]="barChartLegendTwo"
+      [chartType]="barChartTypeTwo"
+      (chartHover)="chartHoveredTwo($event)"
+      (chartClick)="chartClickedTwo($event)">
+    </canvas>
+  </div>
+</div>
+

@@ -1,0 +1,39 @@
+<h3 class="text-center text-primary">Guage-Chart Example One</h3>
+<rg-gauge-chart
+    [canvasWidth]="canvasWidth"
+    [needleValue]="needleValue"
+    [options]="options">
+</rg-gauge-chart>
+
+<br><br>
+<h3 class="text-center text-primary">Guage-Chart Example Two</h3>
+<rg-gauge-chart
+    [canvasWidth]="chartWidthTwo"
+    [needleValue]="needleValueTwo"
+    [options]="optionsTwo"
+    [centralLabel]="centralLabelTwo">
+</rg-gauge-chart>
+
+<h3 class="text-center text-primary">Guage-Chart Example Three</h3><br>
+
+<rg-gauge-chart
+    [canvasWidth]="canvasWidthThree"
+    [needleValue]="needleValueThree"
+    [options]="optionsThree"
+    [centralLabel]="centralLabelThree">
+</rg-gauge-chart>
+
+<h3 class="text-center text-primary">Guage-Chart Example Four</h3><br>
+<div id="power-gauge"></div>
+
+<h1>
+    <ngx-gauge 
+      size=80
+      [type]="gaugeType" 
+      [value]="gaugeValue" 
+      [label]="gaugeLabel" 
+      [append]="gaugeAppendText">
+    </ngx-gauge>
+    <input type="range" min="1" max="100"   min="0" max="100" [(ngModel)]="currentValue" step="1" class="slider"  (input)="gaugeChange($event)">
+</h1>    
+<h4>{{currentValue}}</h4>
